@@ -3,6 +3,7 @@
 #include <vtkRenderer.h>
 #include <vtkCamera.h>
 #include <vtk3DSImporter.h>
+#include <vtkOBJImporter.h>
 #include <vtkSmartPointer.h>
 #include <vtkRenderLargeImage.h>
 #include <vtkAutoInit.h>
@@ -13,8 +14,8 @@
 VTK_MODULE_INIT(vtkRenderingOpenGL2);
 VTK_MODULE_INIT(vtkInteractionStyle);
 
-//std::string file_path = "装配散件模型.3DS";
-std::string file_path = "汽缸盖.3DS";
+std::string file_path = "装配散件模型";
+//std::string file_path = "汽缸盖";
 
 int main()
 {
@@ -31,10 +32,11 @@ int main()
 	renderer->SetBackground(0.1, 0.2, 0.4);			// 设置背景色
 	renWin->SetSize(600, 600);			// 设置窗口的默认大小
 
-	vtkSmartPointer<vtk3DSImporter> importer = 
-		vtkSmartPointer<vtk3DSImporter>::New();		// 创建3DS加载器对象
-	importer->SetFileName(file_path.c_str());		// 指定要读取的3DS文件的文件名或路径
-	importer->ComputeNormalsOn();		// 开启法向量计算
+	vtkSmartPointer<vtkOBJImporter> importer = 
+		vtkSmartPointer<vtkOBJImporter>::New();		// 创建3DS加载器对象
+	importer->SetFileName(std::string(file_path + ".obj").c_str());		// 指定要读取的3DS文件的文件名或路径
+	importer->SetFileNameMTL(std::string(file_path + ".mtl").c_str());
+	//importer->ComputeNormalsOn();		// 开启法向量计算
 	importer->Read();					// 加载3DS模型
 
 	renderer->GetActiveCamera()->SetPosition(100, 200, 0);	// 设置相机的位置(世界坐标系中)
