@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VTK Test", "VTK Test\VTK Te
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Show 3DS", "Show 3DS\Show 3DS.vcxproj", "{446C909D-ABF6-454F-8FE8-F4F05AC19861}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Show OBJ", "Show OBJ\Show OBJ.vcxproj", "{EC391318-C9B7-4423-BAA4-8C5E0280E874}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{446C909D-ABF6-454F-8FE8-F4F05AC19861}.Release|x64.Build.0 = Release|x64
 		{446C909D-ABF6-454F-8FE8-F4F05AC19861}.Release|x86.ActiveCfg = Release|Win32
 		{446C909D-ABF6-454F-8FE8-F4F05AC19861}.Release|x86.Build.0 = Release|Win32
+		{EC391318-C9B7-4423-BAA4-8C5E0280E874}.Debug|x64.ActiveCfg = Debug|x64
+		{EC391318-C9B7-4423-BAA4-8C5E0280E874}.Debug|x64.Build.0 = Debug|x64
+		{EC391318-C9B7-4423-BAA4-8C5E0280E874}.Debug|x86.ActiveCfg = Debug|Win32
+		{EC391318-C9B7-4423-BAA4-8C5E0280E874}.Debug|x86.Build.0 = Debug|Win32
+		{EC391318-C9B7-4423-BAA4-8C5E0280E874}.Release|x64.ActiveCfg = Release|x64
+		{EC391318-C9B7-4423-BAA4-8C5E0280E874}.Release|x64.Build.0 = Release|x64
+		{EC391318-C9B7-4423-BAA4-8C5E0280E874}.Release|x86.ActiveCfg = Release|Win32
+		{EC391318-C9B7-4423-BAA4-8C5E0280E874}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
